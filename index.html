@@ -1,261 +1,483 @@
-<!doctype html>
-<html lang="en-US">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="" />
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wellness Haven - Massage & Spa</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Load Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        /* Custom styles for smooth scrolling and clean font */
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            overflow-x: hidden;
+            background-color: #F8F8F8; /* Light gray background */
+        }
+        /* Custom scroll indicator - optional but adds elegance */
+        .scroll-progress-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 4px;
+            background: linear-gradient(to right, #6D28D9, #E9D5FF);
+            width: 0%;
+            z-index: 50;
+        }
+        .hero-bg {
+            /* Using a darker, more relaxing background color for the placeholder image */
+            /*background-image: url('https://placehold.co/1200x800/1E3A8A/BFDBFE?text=Oasis+of+Tranquility');*/
+            background-size: cover;
+            background-position: center;
+        }
+        .section-heading {
+            color: #5B21B6; /* Deep Purple */
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.05);
+        }
+        .card-hover {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(109, 40, 217, 0.2);
+        }
+        .gallery-item {
+            aspect-ratio: 1 / 1; /* Ensures square images for gallery */
+            object-fit: cover;
+            transition: opacity 0.3s ease, transform 0.3s ease;
+        }
+        .gallery-item:hover {
+            opacity: 0.9;
+            transform: scale(1.02);
+        }
+    </style>
+</head>
+<body class="text-gray-800">
 
-    <!-- Custom Css -->
-    <link rel="stylesheet" href="style.css" type="text/css" />
+    <!-- Scroll Progress Bar -->
+    <div id="progressBar" class="scroll-progress-bar"></div>
 
-    <!-- Ionic icons -->
-    <link href="https://unpkg.com/ionicons@4.2.0/dist/css/ionicons.min.css" rel="stylesheet">
+    <!-- Header & Navigation -->
+    <header class="sticky top-0 z-40 bg-white shadow-lg backdrop-blur-sm bg-opacity-95">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+            <!-- Logo -->
+            <a href="#home" class="text-2xl font-extrabold text-purple-700 tracking-wider flex items-center">
+                <i data-lucide="sparkles" class="w-6 h-6 mr-2 text-pink-500"></i>
+                Honey Massage
+            </a>
 
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900" rel="stylesheet">
-
-    <title>Zion Tech Solutions</title>
-  </head>
-
-  <body>
-    <h1 align="center">Zion Tech Solutions</h1>
-  <!-- N A V B A R -->
-  <nav class="navbar navbar-default navbar-expand-lg fixed-top custom-navbar">
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="icon ion-md-menu"></span>
-    </button>
-    <img src="images/logo1.png" height="30px" width="50px" class="img-fluid nav-logo-mobile" alt="Company Logo">
-    <div class="collapse navbar-collapse" id="navbarNavDropdown">
-      <div class="container">
-      	<img src="images/logo1.png" height="30px" width="50px" class="img-fluid nav-logo-desktop" alt="Company Logo">
-        <ul class="navbar-nav ml-auto nav-right" data-easing="easeInOutExpo" data-speed="1250" data-offset="65">
-          <li class="nav-item nav-custom-link">
-            <a class="nav-link" href="index.html">Home <i class="icon ion-ios-arrow-forward icon-mobile"></i></a>
-          </li>
-          <li class="nav-item nav-custom-link">
-            <a class="nav-link" href="#marketing">Features <i class="icon ion-ios-arrow-forward icon-mobile"></i></a>
-          </li>
-          
-          <li class="nav-item nav-custom-link">
-            <a class="nav-link" href="#pricing">Pricing <i class="icon ion-ios-arrow-forward icon-mobile"></i></a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-  <!-- E N D  N A V B A R -->
-  <!-- Put this code anywhere in the body of your page where you want the badge to show up. -->
-<div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="70f5790a-72a8-4329-804d-0ced8ec2ae4d" data-share-badge-host="https://www.credly.com"></div><script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>
-<div itemscope itemtype='http://schema.org/Person' class='fiverr-seller-widget' style='display: inline-block;'>
-     <a itemprop='url' href=https://www.fiverr.com/abelmesay rel="nofollow" target="_blank" style='display: inline-block;'>
-        <div class='fiverr-seller-content' id='fiverr-seller-widget-content-49925c7c-319e-482c-9d83-6b7f78ec8ed7' itemprop='contentURL' style='display: none;'></div>
-        <div id='fiverr-widget-seller-data' style='display: none;'>
-            <div itemprop='name' >abelmesay</div>
-            <div itemscope itemtype='http://schema.org/Organization'><span itemprop='name'>Fiverr</span></div>
-            <div itemprop='jobtitle'>Seller</div>
-            <div itemprop='description'>Hello, My name is Abel and I'm 4th year computer science student. I'm skilled at developing windows software, websites and databases. I have skills on developing websites using HTML, CSS, JavaScirpt, PHP and developing windows forms application or Windows software using Visual Basic Net and C# Net and implementation of database using Access, Microsoft SQL Server and MySQL. </div>
-        </div>
-    </a>
-</div>
-
-<script id='fiverr-seller-widget-script-49925c7c-319e-482c-9d83-6b7f78ec8ed7' src='https://widgets.fiverr.com/api/v1/seller/abelmesay?widget_id=49925c7c-319e-482c-9d83-6b7f78ec8ed7' data-config='{"category_name":"Programming \u0026 Tech"}' async='true' defer='true'></script>
-
-  <!-- H E R O -->
-  <section id="hero">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-5 col-md-5 col-sm-5 col-xs-5">
-          <img src="images/iphone.png" class="img-fluid" alt="Demo image">
-        </div>
-        <div class="col-md-7 content-box hero-content">
-          <span>Zion Tech Solutions</span>
-          <h1>Software and Website Development <b>For Digitializing Company Business</b></h1>
-          <p>Boost your digital marketing campaigns and increase your conversion rates</p>
-          <a href="#" class="btn btn-regular">Learn more</a>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- E N D  H E R O -->
-
-  <!-- E N D  M A R K E T I N G -->
-  <section id="marketing">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-5">
-          <div class="content-box">
-            <!-- Put this code anywhere in the body of your page where you want the badge to show up. -->
-
-<div itemscope itemtype='http://schema.org/Person' class='fiverr-seller-widget' style='display: inline-block;'>
-     <a itemprop='url' href=https://www.fiverr.com/abelmesay rel="nofollow" target="_blank" style='display: inline-block;'>
-        <div class='fiverr-seller-content' id='fiverr-seller-widget-content-49925c7c-319e-482c-9d83-6b7f78ec8ed7' itemprop='contentURL' style='display: none;'></div>
-        <div id='fiverr-widget-seller-data' style='display: none;'>
-            <div itemprop='name' >abelmesay</div>
-            <div itemscope itemtype='http://schema.org/Organization'><span itemprop='name'>Fiverr</span></div>
-            <div itemprop='jobtitle'>Seller</div>
-            <div itemprop='description'>Hello, My name is Abel and I'm 4th year computer science student. I'm skilled at developing windows software, websites and databases. I have skills on developing websites using HTML, CSS, JavaScirpt, PHP and developing windows forms application or Windows software using Visual Basic Net and C# Net and implementation of database using Access, Microsoft SQL Server and MySQL. </div>
-        </div>
-    </a>
-</div>
-
-<script id='fiverr-seller-widget-script-49925c7c-319e-482c-9d83-6b7f78ec8ed7' src='https://widgets.fiverr.com/api/v1/seller/abelmesay?widget_id=49925c7c-319e-482c-9d83-6b7f78ec8ed7' data-config='{"category_name":"Programming \u0026 Tech"}' async='true' defer='true'></script>
-
-            <span>Development Service</span>
-            <h2>Desktop Application Development</h2>
-            <p>Grow your business, digitalize your business and use modern technologies.</p>
-            <a href="https://www.upwork.com/services/product/development-it-desktop-application-with-c-vb-net-java-with-mysql-sqlserver-and-access-1660703384288047104?ref=project_share&tier=2" class="btn btn-regular">Order Today</a>
-          </div>
-        </div>
-        <div class="col-md-7">
-            <img src="images/desktop.png" class="img-fluid" alt="Demo image">
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- E N D  M A R K E T I N G -->
-
-  <!-- P R I C I N G -->
-  <section id="pricing">
-    <div class="container">
-      <div class="title-block">
-        <h2>Plans and Pricing</h2>
-        <p>The best software to develop perfect performance and data management to increase leads, process, business and sales.</p>
-      </div>
-      <div class="row">
-        <div class="col-md-4">
-          <div class="pricing-box">
-            <h3 class="demo">Starter Version</h3>
-            <h6>$100</h6>
-            <small>Per Project</small>
-            <p>Starter version, you will get exe format of the software</p>
-            <div class="divider-light"></div>
-            <ul>
-              <li><i class="icon ion-md-checkmark-circle-outline demo"></i>Deliveray Date - 14days</li>
-              <li><i class="icon ion-md-checkmark-circle-outline demo"></i>Number of Revisions - 2</li>
-              <li><i class="icon ion-md-checkmark-circle-outline demo"></i>Source Code - Not included</li>
-              <li><i class="icon ion-md-checkmark-circle-outline demo"></i>Setup File - Included</li>
-              <li><i class="icon ion-md-checkmark-circle-outline demo"></i>Detailed Code Comments - <span class="demo">Not included</span></li>
-            </ul>
-            <div class="text-center">
-              <a href="https://www.upwork.com/services/product/development-it-desktop-application-with-c-vb-net-java-with-mysql-sqlserver-and-access-1660703384288047104?ref=project_share&tier=0" class="btn btn-demo">Order Now</a>
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex space-x-8 font-medium">
+                <a href="#services" class="text-gray-600 hover:text-purple-700 transition duration-150">Services & Pricing</a>
+                <a href="#about" class="text-gray-600 hover:text-purple-700 transition duration-150">About Us</a>
+                <a href="#gallery" class="text-gray-600 hover:text-purple-700 transition duration-150">Gallery</a>
+                <a href="#contact" class="text-gray-600 hover:text-purple-700 transition duration-150">Contact</a>
             </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="pricing-box">
-            <h3 class="demo">Standard Version</h3>
-            <h6>$200</h6>
-            <small>Per Project</small>
-            <p>Starter version, you will get exe format of the software</p>
-            <div class="divider-light"></div>
-            <ul>
-              <li><i class="icon ion-md-checkmark-circle-outline demo"></i>Deliveray Date - 21days</li>
-              <li><i class="icon ion-md-checkmark-circle-outline demo"></i>Number of Revisions - 4</li>
-              <li><i class="icon ion-md-checkmark-circle-outline demo"></i>Source Code - Not included</li>
-              <li><i class="icon ion-md-checkmark-circle-outline demo"></i>Setup File - Included</li>
-              <li><i class="icon ion-md-checkmark-circle-outline demo"></i>Detailed Code Comments - <span class="demo">Included</span></li>
-            </ul>
-            <div class="text-center">
-              <a href="https://www.upwork.com/services/product/development-it-desktop-application-with-c-vb-net-java-with-mysql-sqlserver-and-access-1660703384288047104?ref=project_share&tier=1" class="btn btn-demo">Order Now</a>
+
+            <!-- Booking Button -->
+            <a href="#contact" class="hidden md:inline-flex items-center justify-center px-4 py-2 border border-transparent text-sm font-medium rounded-full text-white bg-purple-600 hover:bg-purple-700 transition duration-150 shadow-lg hover:shadow-xl">
+                Book Now
+            </a>
+
+            <!-- Mobile Menu Button (Hamburger) -->
+            <button id="mobileMenuButton" class="md:hidden p-2 rounded-md text-gray-700 hover:bg-gray-100 transition duration-150">
+                <i data-lucide="menu" class="w-6 h-6"></i>
+            </button>
+        </nav>
+
+        <!-- Mobile Menu (Dropdown) -->
+        <div id="mobileMenu" class="md:hidden hidden">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 text-center">
+                <a href="#services" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-purple-50 hover:text-purple-700 transition duration-150">Services & Pricing</a>
+                <a href="#about" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-purple-50 hover:text-purple-700 transition duration-150">About Us</a>
+                <a href="#gallery" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-purple-50 hover:text-purple-700 transition duration-150">Gallery</a>
+                <a href="#contact" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-purple-50 hover:text-purple-700 transition duration-150">Contact</a>
+                <a href="#contact" class="block mt-2 mx-4 py-2 border border-transparent text-sm font-medium rounded-full text-white bg-purple-600 hover:bg-purple-700 shadow-md">Book Now</a>
             </div>
-          </div>
         </div>
-        <div class="col-md-4">
-          <div class="pricing-box">
-            <h3 class="demo">Advanced Version</h3>
-            <h6>$500</h6>
-            <small>Per Project</small>
-            <p>Starter version, you will get exe format of the software</p>
-            <div class="divider-light"></div>
-            <ul>
-              <li><i class="icon ion-md-checkmark-circle-outline demo"></i>Deliveray Date - 30days</li>
-              <li><i class="icon ion-md-checkmark-circle-outline demo"></i>Number of Revisions - Unlimited</li>
-              <li><i class="icon ion-md-checkmark-circle-outline demo"></i>Source Code - Included</li>
-              <li><i class="icon ion-md-checkmark-circle-outline demo"></i>Setup File - Included</li>
-              <li><i class="icon ion-md-checkmark-circle-outline demo"></i>Detailed Code Comments - <span class="demo">Included</span></li>
-            </ul>
-            <div class="text-center">
-              <a href="https://www.upwork.com/services/product/development-it-desktop-application-with-c-vb-net-java-with-mysql-sqlserver-and-access-1660703384288047104?ref=project_share&tier=2" class="btn btn-demo">Order Now</a>
+    </header>
+
+    <main>
+        <!-- 1. Home / Hero Section -->
+        <section id="home" class="hero-bg h-screen flex items-center justify-center text-center">
+            <div class="bg-white/90 p-8 md:p-16 rounded-xl shadow-2xl max-w-4xl mx-4 transform transition duration-500 hover:scale-[1.01]">
+                <h1 class="text-4xl sm:text-6xl font-extrabold text-purple-800 mb-4 section-heading">
+                    Find Your Inner Peace
+                </h1>
+                <p class="text-lg sm:text-xl text-gray-700 mb-8">
+                    Personalized massage and spa treatments designed to soothe your mind, body, and soul. Step into an oasis of tranquility.
+                </p>
+                <a href="#services" class="inline-flex items-center justify-center px-8 py-3 border-4 border-purple-600 text-base font-medium rounded-full text-purple-600 bg-white hover:bg-purple-50 transition duration-300 shadow-lg hover:shadow-2xl">
+                    Explore Services
+                </a>
             </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- E N D  P R I C I N G -->
+        </section>
 
-  <!-- C A L L  T O  A C T I O N -->
-  <section id="call-to-action">
-    <div class="container text-center">
-      <h2>Get your desktop application today</h2>
-      <div class="title-block">
-        <p>Get your desktop application to increase both your business rates and boost your sales and profits.</p>
-        <a href="https://www.upwork.com/services/product/development-it-desktop-application-with-c-vb-net-java-with-mysql-sqlserver-and-access-1660703384288047104?ref=project_share&tier=2" class="btn btn-regular">Get Started</a>
-      </div>
-    </div>
-  </section>
-  <!-- E N D  C A L L  T O  A C T I O N -->
+        <!-- 2. Services Section -->
+        <section id="services" class="py-16 md:py-24 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 section-heading">Our Signature Services</h2>
+                <p class="text-xl text-gray-500 mb-12 max-w-3xl mx-auto">
+                    A tailored approach to wellness, offering the perfect treatment for your every need.
+                </p>
 
-  <!--  F O O T E R  -->
-  <footer>
-    <div class="container">
-      <div class="row">
-        
-        <div class="col-md-3">
-          <h5>Main Tools</h5>
-          <ul>
-            <li><a href="#">Java</a></li>
-            <li><a href="#">JavaFX</a></li>
-            <li><a href="#">C#</a></li>
-            <li><a href="#">VB.Net</a></li>
-            <li><a href="#">ASP.Net</a></li>
-            <li><a href="#">HTML, CSS, JavaScript</a></li>
-            <li><a href="#">PHP</a></li>
-            <li><a href="#">SQL Server</a></li>
-            <li><a href="#">MySQL</a></li>
-            <li><a href="#">Access</a></li>
-            <li><a href="#">PostgreSQL</a></li>
-          </ul>
-        </div>
-        
-        <div class="col-md-3">
-          <h5>Zion Tech Solutions</h5>
-          <p>Zion Tech Solutions is established for giving software developemnt services via Upwork</p>
-          <p>Our services include</p>
-          <ul type="bullet">
-            <li>Developing Desktop Applications</li>
-            <li>Developing Web Applications</li>
-            <li>Developing Database</li>
-            <li>System Analysis</li>
-            <li>System Design</li>
-          </ul>
-          <p><a href="mailto:abelmesay49@gmail.com" class="external-links">abelmesay49@gmail.com</a></p>
-        </div>
-      </div> 
-      <div class="divider"></div>
-      <div class="row">
-        <div class="col-md-6 col-xs-12">
-            <a href="#"><i class="icon ion-logo-facebook"></i></a>
-            <a href="#"><i class="icon ion-logo-instagram"></i></a>
-            <a href="#"><i class="icon ion-logo-twitter"></i></a>
-            <a href="#"><i class="icon ion-logo-youtube"></i></a>
-          </div>
-          <div class="col-md-6 col-xs-12">
-            <small>2023 &copy; All rights reserved. Made by Zion Tech Solutions</small>
-          </div>
-      </div>
-    </div>
-  </footer>
-  <!--  E N D  F O O T E R  -->
-    
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Service Card 1 -->
+                    <div class="card-hover bg-purple-50 p-6 rounded-xl shadow-lg border-t-4 border-purple-600">
+                        <i data-lucide="hand-heart" class="w-12 h-12 text-purple-600 mx-auto mb-4"></i>
+                        <h3 class="text-2xl font-semibold text-purple-800 mb-3">Swedish Relaxation</h3>
+                        <p class="text-gray-600">
+                            A classic full-body massage using light to medium pressure to relieve muscle tension and increase circulation.
+                        </p>
+                    </div>
 
-    <!-- External JavaScripts -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
-  </body>
+                    <!-- Service Card 2 -->
+                    <div class="card-hover bg-purple-50 p-6 rounded-xl shadow-lg border-t-4 border-pink-500">
+                        <i data-lucide="gem" class="w-12 h-12 text-pink-500 mx-auto mb-4"></i>
+                        <h3 class="text-2xl font-semibold text-purple-800 mb-3">Deep Tissue Therapy</h3>
+                        <p class="text-gray-600">
+                            Targeting deeper layers of muscle and connective tissue to treat chronic pain and stiffness.
+                        </p>
+                    </div>
+
+                    <!-- Service Card 3 -->
+                    <div class="card-hover bg-purple-50 p-6 rounded-xl shadow-lg border-t-4 border-teal-500">
+                        <i data-lucide="bath" class="w-12 h-12 text-teal-500 mx-auto mb-4"></i>
+                        <h3 class="text-2xl font-semibold text-purple-800 mb-3">Aromatherapy Spa</h3>
+                        <p class="text-gray-600">
+                            Experience ultimate detoxification with aromatic essential oils, exfoliation, and a restorative wrap.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pricing Subsection (Part of Services) -->
+        <section id="pricing" class="py-16 md:py-20 bg-gray-50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h3 class="text-3xl font-bold mb-12 text-gray-800">Flexible Pricing Plans</h3>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Price Card 1: 60 Minutes -->
+                    <div class="card-hover bg-white p-8 rounded-xl shadow-xl border border-gray-200">
+                        <p class="text-lg font-semibold text-purple-600">60 Minutes</p>
+                        <p class="text-5xl font-extrabold text-gray-900 mt-2 mb-4">$90</p>
+                        <p class="text-gray-500 mb-6">Perfect for a focused, relaxing session.</p>
+                        <ul class="text-left space-y-3 mb-8">
+                            <li class="flex items-center text-gray-700"><i data-lucide="check-circle" class="w-5 h-5 mr-2 text-teal-500"></i> Full-Body Massage</li>
+                            <li class="flex items-center text-gray-700"><i data-lucide="check-circle" class="w-5 h-5 mr-2 text-teal-500"></i> Hot Towel Treatment</li>
+                            <li class="flex items-center text-gray-700"><i data-lucide="x-circle" class="w-5 h-5 mr-2 text-red-400"></i> Aromatherapy Oils</li>
+                        </ul>
+                        <a href="#contact" class="block w-full py-3 text-lg font-semibold rounded-full text-purple-600 bg-purple-100 hover:bg-purple-200 transition duration-300">
+                            Select 60 Min
+                        </a>
+                    </div>
+
+                    <!-- Price Card 2: 90 Minutes (Recommended) -->
+                    <div class="card-hover bg-white p-8 rounded-xl shadow-2xl border-4 border-purple-600 transform scale-[1.03]">
+                        <div class="absolute top-0 right-0 -mt-3 -mr-3 px-4 py-1 bg-pink-500 text-white text-sm font-bold uppercase rounded-bl-lg rounded-tr-xl shadow-md">
+                            Best Value
+                        </div>
+                        <p class="text-lg font-semibold text-purple-600">90 Minutes</p>
+                        <p class="text-5xl font-extrabold text-gray-900 mt-2 mb-4">$125</p>
+                        <p class="text-gray-500 mb-6">Recommended for deep restorative relaxation.</p>
+                        <ul class="text-left space-y-3 mb-8">
+                            <li class="flex items-center text-gray-700"><i data-lucide="check-circle" class="w-5 h-5 mr-2 text-teal-500"></i> Full-Body Massage</li>
+                            <li class="flex items-center text-gray-700"><i data-lucide="check-circle" class="w-5 h-5 mr-2 text-teal-500"></i> Hot Stone Integration</li>
+                            <li class="flex items-center text-gray-700"><i data-lucide="check-circle" class="w-5 h-5 mr-2 text-teal-500"></i> Aromatherapy Oils</li>
+                        </ul>
+                        <a href="#contact" class="block w-full py-3 text-lg font-semibold rounded-full text-white bg-purple-600 hover:bg-purple-700 transition duration-300 shadow-lg">
+                            Book 90 Min
+                        </a>
+                    </div>
+
+                    <!-- Price Card 3: 120 Minutes -->
+                    <div class="card-hover bg-white p-8 rounded-xl shadow-xl border border-gray-200">
+                        <p class="text-lg font-semibold text-purple-600">120 Minutes</p>
+                        <p class="text-5xl font-extrabold text-gray-900 mt-2 mb-4">$150</p>
+                        <p class="text-gray-500 mb-6">The ultimate spa journey and complete reset.</p>
+                        <ul class="text-left space-y-3 mb-8">
+                            <li class="flex items-center text-gray-700"><i data-lucide="check-circle" class="w-5 h-5 mr-2 text-teal-500"></i> Full-Body & Foot Reflexology</li>
+                            <li class="flex items-center text-gray-700"><i data-lucide="check-circle" class="w-5 h-5 mr-2 text-teal-500"></i> Full Spa Treatment</li>
+                            <li class="flex items-center text-gray-700"><i data-lucide="check-circle" class="w-5 h-5 mr-2 text-teal-500"></i> Exclusive Signature Blend</li>
+                        </ul>
+                        <a href="#contact" class="block w-full py-3 text-lg font-semibold rounded-full text-purple-600 bg-purple-100 hover:bg-purple-200 transition duration-300">
+                            Select 120 Min
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. About Us Section (Includes History and Team) -->
+        <section id="about" class="py-16 md:py-24 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 section-heading">About</h2>
+                <p class="text-xl text-gray-600 mb-6 max-w-4xl mx-auto">
+                    Founded in 2025, our mission is to create a sanctuary where modern therapeutic techniques meet ancient wellness traditions. We believe self-care is a necessity, not a luxury.
+                </p>
+                <div class="bg-purple-50 p-6 rounded-xl shadow-inner mb-12 max-w-4xl mx-auto">
+                    <p class="text-lg font-medium text-purple-700 italic">
+                        "Healing is a matter of time, but it is sometimes also a matter of opportunity." - Hippocrates
+                    </p>
+                </div>
+                
+                <!-- Team Subsection -->
+                <h3 class="text-2xl font-bold mb-8 text-gray-800">Meet Our Certified Therapists</h3>
+
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                    <!-- Team Member 1 -->
+                    <div class="card-hover">
+                        <img class="w-32 h-32 mx-auto rounded-full object-cover shadow-lg mb-4 border-4 border-purple-200"
+                             src="https://placehold.co/128x128/9D90C0/ffffff?text=Ava"
+                             alt="Therapist Ava Chen" onerror="this.onerror=null;this.src='https://placehold.co/128x128/9D90C0/ffffff?text=A'">
+                        <h4 class="text-xl font-semibold text-purple-800">Therapist 1</h4>
+                        <p class="text-purple-600 font-medium">Deep Tissue Specialist</p>
+                        <p class="text-sm text-gray-500 mt-2">10+ years experience, certified in Thai Massage.</p>
+                    </div>
+
+                    <!-- Team Member 2 -->
+                    <div class="card-hover">
+                        <img class="w-32 h-32 mx-auto rounded-full object-cover shadow-lg mb-4 border-4 border-purple-200"
+                             src="https://placehold.co/128x128/B8A8D8/ffffff?text=Liam"
+                             alt="Therapist Liam Patel" onerror="this.onerror=null;this.src='https://placehold.co/128x128/B8A8D8/ffffff?text=L'">
+                        <h4 class="text-xl font-semibold text-purple-800">Therapist 2</h4>
+                        <p class="text-purple-600 font-medium">Holistic Wellness Expert</p>
+                        <p class="text-sm text-gray-500 mt-2">Specializes in Hot Stone and energy work.</p>
+                    </div>
+
+                    <!-- Team Member 3 -->
+                    <div class="card-hover">
+                        <img class="w-32 h-32 mx-auto rounded-full object-cover shadow-lg mb-4 border-4 border-purple-200"
+                             src="https://placehold.co/128x128/D4C9E6/ffffff?text=Sarah"
+                             alt="Therapist Sarah Kim" onerror="this.onerror=null;this.src='https://placehold.co/128x128/D4C9E6/ffffff?text=S'">
+                        <h4 class="text-xl font-semibold text-purple-800">Sarah Kim</h4>
+                        <p class="text-purple-600 font-medium">Therapist 3</p>
+                        <p class="text-sm text-gray-500 mt-2">Master blender of essential oils for custom treatments.</p>
+                    </div>
+
+                    <!-- Team Member 4 -->
+                    <div class="card-hover">
+                        <img class="w-32 h-32 mx-auto rounded-full object-cover shadow-lg mb-4 border-4 border-purple-200"
+                             src="https://placehold.co/128x128/EDE9FE/ffffff?text=Michael"
+                             alt="Therapist Michael Doe" onerror="this.onerror=null;this.src='https://placehold.co/128x128/EDE9FE/ffffff?text=M'">
+                        <h4 class="text-xl font-semibold text-purple-800">Therapist 4</h4>
+                        <p class="text-purple-600 font-medium">Sports Massage</p>
+                        <p class="text-sm text-gray-500 mt-2">Focuses on recovery and injury prevention.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. Gallery Section -->
+        <section id="gallery" class="py-16 md:py-24 bg-gray-100">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 section-heading">Our Gallery: Your Retreat</h2>
+                <p class="text-xl text-gray-500 mb-12 max-w-3xl mx-auto">
+                    A visual tour of our facilities, showcasing the serene and luxurious environment we have created for your peace.
+                </p>
+
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 rounded-xl overflow-hidden shadow-2xl">
+                    <img class="gallery-item w-full h-auto rounded-lg shadow-md" 
+                         src="https://placehold.co/600x600/D1C4E9/ffffff?text=Treatment+Room" 
+                         alt="Serene treatment room interior" 
+                         onerror="this.onerror=null;this.src='https://placehold.co/600x600/D1C4E9/ffffff?text=Room'">
+                    
+                    <img class="gallery-item w-full h-auto rounded-lg shadow-md" 
+                         src="https://placehold.co/600x600/B39DDB/ffffff?text=Lounge+Area" 
+                         alt="Relaxing lounge area"
+                         onerror="this.onerror=null;this.src='https://placehold.co/600x600/B39DDB/ffffff?text=Lounge'">
+                    
+                    <img class="gallery-item w-full h-auto rounded-lg shadow-md" 
+                         src="https://placehold.co/600x600/9575CD/ffffff?text=Spa+Products" 
+                         alt="Natural spa products"
+                         onerror="this.onerror=null;this.src='https://placehold.co/600x600/9575CD/ffffff?text=Products'">
+                    
+                    <img class="gallery-item w-full h-auto rounded-lg shadow-md" 
+                         src="https://placehold.co/600x600/7E57C2/ffffff?text=Water+Feature" 
+                         alt="Calm water feature in lobby"
+                         onerror="this.onerror=null;this.src='https://placehold.co/600x600/7E57C2/ffffff?text=Feature'">
+                </div>
+            </div>
+        </section>
+
+
+        <!-- 5. Contact Section & Booking Form -->
+        <section id="contact" class="py-16 md:py-24 bg-purple-600">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 text-white text-center">Ready for Relaxation?</h2>
+                <p class="text-xl text-purple-200 mb-12 text-center max-w-2xl mx-auto">
+                    Book your appointment today or reach out with any questions. We look forward to seeing you.
+                </p>
+
+                <div class="bg-white p-8 md:p-10 rounded-xl shadow-2xl">
+                    <form id="bookingForm" class="space-y-6">
+                        <div>
+                            <label for="name" class="block text-sm font-medium text-gray-700">Full Name</label>
+                            <input type="text" id="name" name="name" required
+                                   class="mt-1 block w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm focus:ring-purple-500 focus:border-purple-500 transition duration-150">
+                        </div>
+
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-gray-700">Email Address</label>
+                            <input type="email" id="email" name="email" required
+                                   class="mt-1 block w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm focus:ring-purple-500 focus:border-purple-500 transition duration-150">
+                        </div>
+
+                        <div>
+                            <label for="service" class="block text-sm font-medium text-gray-700">Desired Service</label>
+                            <select id="service" name="service" required
+                                    class="mt-1 block w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm focus:ring-purple-500 focus:border-purple-500 transition duration-150 bg-white">
+                                <option value="">Select a service...</option>
+                                <option value="Swedish-60min">Swedish Relaxation (60 min)</option>
+                                <option value="DeepTissue-90min">Deep Tissue Therapy (90 min)</option>
+                                <option value="Aromatherapy-120min">Aromatherapy Spa (120 min)</option>
+                                <option value="Custom">Custom Request</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label for="message" class="block text-sm font-medium text-gray-700">Message / Preferred Date</label>
+                            <textarea id="message" name="message" rows="4"
+                                      class="mt-1 block w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm focus:ring-purple-500 focus:border-purple-500 transition duration-150"></textarea>
+                        </div>
+
+                        <button type="submit"
+                                class="w-full flex justify-center items-center py-3 border border-transparent rounded-full shadow-lg text-lg font-medium text-white bg-pink-500 hover:bg-pink-600 transition duration-300">
+                            <i data-lucide="calendar-check" class="w-5 h-5 mr-2"></i> Submit Booking Request
+                        </button>
+
+                        <!-- Success Message Box (Hidden by default) -->
+                        <div id="successMessage" class="hidden mt-4 p-4 rounded-lg bg-teal-100 text-teal-800 border border-teal-300 font-medium">
+                            <p>Thank you! Your booking request has been submitted. We will contact you within 24 hours to confirm your appointment.</p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-4 gap-8">
+
+            <!-- Footer Column 1: Brand & Social -->
+            <div>
+                <a href="#home" class="text-xl font-extrabold text-purple-400 tracking-wider flex items-center mb-3">
+                    <i data-lucide="sparkles" class="w-5 h-5 mr-2 text-pink-400"></i>
+                    Honey Massage
+                </a>
+                <p class="text-gray-400 text-sm mb-4">Your daily retreat for self-care and relaxation.</p>
+                <div class="flex space-x-4">
+                    <a href="#" class="text-gray-400 hover:text-purple-400 transition duration-150"><i data-lucide="instagram" class="w-6 h-6"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-purple-400 transition duration-150"><i data-lucide="facebook" class="w-6 h-6"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-purple-400 transition duration-150"><i data-lucide="twitter" class="w-6 h-6"></i></a>
+                </div>
+            </div>
+
+            <!-- Footer Column 2: Quick Links -->
+            <div>
+                <h5 class="text-lg font-semibold mb-4 text-white">Quick Links</h5>
+                <ul class="space-y-2 text-sm">
+                    <li><a href="#services" class="text-gray-400 hover:text-purple-400 transition duration-150">Services Menu</a></li>
+                    <li><a href="#pricing" class="text-gray-400 hover:text-purple-400 transition duration-150">View Pricing</a></li>
+                    <li><a href="#about" class="text-gray-400 hover:text-purple-400 transition duration-150">About Us</a></li>
+                    <li><a href="#gallery" class="text-gray-400 hover:text-purple-400 transition duration-150">Gallery</a></li>
+                    <li><a href="#contact" class="text-gray-400 hover:text-purple-400 transition duration-150">Book Appointment</a></li>
+                </ul>
+            </div>
+
+            <!-- Footer Column 3: Contact Info -->
+            <div>
+                <h5 class="text-lg font-semibold mb-4 text-white">Get In Touch</h5>
+                <ul class="space-y-2 text-sm">
+                    <li class="flex items-center text-gray-400"><i data-lucide="map-pin" class="w-4 h-4 mr-2"></i> Addis Ababa, Bole Edna Mall</li>
+                    <li class="flex items-center text-gray-400"><i data-lucide="phone" class="w-4 h-4 mr-2"></i>+251951078852</li>
+                    <li class="flex items-center text-gray-400"><i data-lucide="mail" class="w-4 h-4 mr-2"></i> abelmesay49@gmail.com</li>
+                </ul>
+            </div>
+
+            <!-- Footer Column 4: Hours -->
+            <div>
+                <h5 class="text-lg font-semibold mb-4 text-white">Operating Hours</h5>
+                <p class="text-sm text-gray-400">Mon - Sun: 24hr</p>
+            </div>
+        </div>
+
+        <!-- Copyright -->
+        <div class="mt-8 pt-6 border-t border-gray-700 text-center text-sm text-gray-500">
+            &copy; 2025. All rights reserved.
+        </div>
+    </footer>
+
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+
+        // 1. Mobile Menu Toggle
+        const mobileMenuButton = document.getElementById('mobileMenuButton');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const navLinks = mobileMenu.querySelectorAll('a');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when a link is clicked
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // 2. Scroll Progress Bar
+        const progressBar = document.getElementById('progressBar');
+
+        window.onscroll = function() {
+            let winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            let height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            let scrolled = (winScroll / height) * 100;
+            progressBar.style.width = scrolled + "%";
+        };
+
+        // 3. Form Submission Handling (For static website mock)
+        const bookingForm = document.getElementById('bookingForm');
+        const successMessage = document.getElementById('successMessage');
+
+        bookingForm.addEventListener('submit', function(event) {
+            event.preventDefault(); // Stop the default form submission
+
+            // Simple validation check (can be expanded)
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+
+            if (name && email) {
+                // In a real application, you would send this data to a server here.
+                console.log('--- Booking Data Submitted (Mock) ---');
+                console.log('Name:', name);
+                console.log('Email:', email);
+                console.log('Service:', document.getElementById('service').value);
+                console.log('Message:', document.getElementById('message').value);
+                console.log('------------------------------------');
+
+                // Show success message
+                successMessage.classList.remove('hidden');
+                // Clear the form fields
+                bookingForm.reset(); 
+                
+                // Hide success message after a few seconds
+                setTimeout(() => {
+                    successMessage.classList.add('hidden');
+                }, 5000);
+
+            } else {
+                console.error('Please fill out all required fields.');
+            }
+        });
+    </script>
+</body>
 </html>
